@@ -116,6 +116,15 @@
                     <artifactId>maven-gpg-plugin</artifactId>
                     <version>1.6</version>
                 </plugin>
+                <!-- Disable this, to deploy with Sonatype -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -293,7 +302,7 @@
                 <repository>
                     <id>sonatype</id>
                     <name>Sonatype Releases</name>
-                    <url>https://oss.sonatype .org/service/local/staging/deploy/maven2</url>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
                 </repository>
                 <snapshotRepository>
                     <id>sonatype</id>
