@@ -12,7 +12,7 @@ MAVEN_CLI_OPTS="--settings ${CI_PATH}/.m2/settings.xml --batch-mode --errors --s
 
 git checkout $(git rev-parse HEAD)
 mvn versions:set "-DnewVersion=${TAG}"
-${CI_SCRIPTS_PATH}/gpg-import.sh
+${CI_SCRIPTS_PATH}/artifacts-signing-key-decryption.sh
 mvn deploy ${MAVEN_CLI_OPTS} -DskipTests --activate-profiles code-source,code-documentation,artifacts-signing,artifacts-deployment
 git commit -am "Release ${TAG}"
 git tag -f ${TAG}
