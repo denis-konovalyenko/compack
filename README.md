@@ -10,7 +10,7 @@ Packages with assertions to affirm.
 <dependency>
   <groupId>com.deniskonovalyenko</groupId>
   <artifactId>compack</artifactId>
-  <version>${version}</version>
+  <version>1.0.2</version>
 </dependency>
 ```
 Java version required: 1.8+.
