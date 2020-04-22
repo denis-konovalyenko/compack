@@ -27,7 +27,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.deniskonovalyenko</groupId>
     <artifactId>compack</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -284,7 +284,7 @@
                             <serverId>sonatype</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <!-- Set this to true and the release will automatically proceed and sync to Central Repository will follow  -->
-                            <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                         <executions>
                             <execution>
@@ -292,7 +292,6 @@
                                 <phase>deploy</phase>
                                 <goals>
                                     <goal>deploy</goal>
-                                    <goal>release</goal>
                                 </goals>
                             </execution>
                         </executions>
