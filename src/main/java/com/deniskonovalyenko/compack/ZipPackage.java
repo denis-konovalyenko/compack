@@ -24,6 +24,7 @@
 package com.deniskonovalyenko.compack;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,6 +38,15 @@ public final class ZipPackage implements Package {
      * A zip file.
      */
     private final ZipFile zipFile;
+
+    /**
+     * Constructs the zip package from a provided path.
+     * @param path The path
+     * @throws IOException If an I/O error occurs
+     */
+    public ZipPackage(final Path path) throws IOException {
+        this(new ZipFile(path.toFile()));
+    }
 
     /**
      * Constructs the zip package.
