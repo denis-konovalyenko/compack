@@ -12,6 +12,7 @@ MAVEN_CLI_OPTS="--settings ${CI_PATH}/.m2/settings.xml --batch-mode --errors --s
 
 git checkout master
 mvn versions:set "-DnewVersion=${TAG}"
+sed -i "" "s/<version>.*<\/version>/<version>${TAG}<\/version>/" README.md
 ${CI_SCRIPTS_PATH}/artifacts-signing-key-decryption.sh
 mvn deploy ${MAVEN_CLI_OPTS} -DskipTests --activate-profiles code-source,code-documentation,artifacts-signing,artifacts-deployment
 git commit -am "Release ${TAG}"
