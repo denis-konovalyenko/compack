@@ -22,6 +22,6 @@
  * SOFTWARE.
  */
 /**
- * Tests for packages and package entries.
+ * Tests for assertions.
  */
-package com.deniskonovalyenko.compack;
+package com.deniskonovalyenko.compack.assertion;

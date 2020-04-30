@@ -21,10 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.deniskonovalyenko.compack;
+package com.deniskonovalyenko.compack.assertion;
 
-import com.deniskonovalyenko.compack.assertion.Assertion;
-import com.deniskonovalyenko.compack.assertion.BytesEqualityAssertion;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
